@@ -1,0 +1,204 @@
+# textdomain: scifi_nodes
+
+
+### builder.lua ###
+
+Node Builder=Blockbauer
+Sci-fi Node Builder=Sci-Fi Blockbauer
+
+### chest.lua ###
+
+Crate=Kiste
+Storage box=Aufbewahrungsbox
+
+### digicode.lua ###
+
+Digicode=Digicode
+
+### doors.lua ###
+
+ sliding door= gleitende Tür
+
+### models.lua ###
+
+Slope=Neigung
+
+### nodeboxes.lua ###
+
+Alien Egg=Fremdartiges Ei
+Alien Platform=Fremdartige Plattform
+Alien wall pipe=Fremdartige Wandrohre
+Gloshroom=Glanzpilz
+Hanging Trap Plant=Hängefallenpflanze
+Keyboard and monitor=Tastatur und Monitor
+Liquid pipe=Flüssigkeitenrohr
+Liquid pipe 2=Flüssigkeitenrohr 2
+Metal Ladder=Metall-Leiter
+Metal cover=Metallene Abdeckung
+Metal table=Metalltisch
+Microscope=Mikroskop
+Purple Window=Purpurnes Fenster
+Wall light=Wandlicht
+ceiling light=Deckenlicht
+computer=Computr
+glass screen=Glasbildschirm
+item holder=Gegenstandshalter
+laptop=Laptop
+
+metal plant pot (right click for lid, shift+rightclick to plant)=Metalpflanzkübel (rechts klick für abdecken, umsch.+rechtsklick zum Bepflanzen)
+
+metal wet plant pot(right click for lid, shift+rightclick to plant)=Metalpflanzkübel nass (rechts klick für abdecken, umsch.+rechtsklick zum Bepflanzen)
+
+orange lightbars=Orange Lichtstreifen
+pipe(nodebox)=Rohre(nodebox)
+plant pot lid(place above plant)=Pflanzkübeldeckel (über der Pflanze montiert)
+sample capsule=Probekapsel
+strong window=Panzerfenster
+strong window corner=Panzerfenster Ecke
+strong window corner(black)=Panzerfenster Ecke(schwarz)
+strong window panel=Panzerfenster Scheibe
+strong window(black)=Panzerfenster(schwarz)
+tallscreen=Hochbildschirm
+teleport pad=Teleporter Plattform
+widescreen=Breitbildschirm
+
+### nodes.lua ###
+
+Black plate=Schwarze Plate
+Black vent=Schwarze Entlüftung
+Blue=Blaues
+Blue Grid=Blaues Raster
+Blue wall light=Blaues Wandlicht
+Brown Doom floor=Browner Endzeitboden
+Damaged black wall=Beschädigte schwarze Wand
+Dirt With Alien Grass=Erde mit fremdartigem Gras
+Doom engine wall=Endzeit Maschinenwand
+Doom floor=Endzeit Boden
+Doom light=Endzeit Licht
+Doom wall=Endzeit Mauer
+Fan=Ventilator
+Green=Grünes
+Green metal block=Güner Metallblock
+Junk=Müll
+Moonstone=Mondgestein
+Octagon Glass=achteckiges Glas
+Orange=Oranges
+Purple=Purpurnes
+Purple node=Purpurner Block
+Purple tile=Purpurne Fliese
+Purple wall=Purpurne Wand
+Super Plastic=Superplastik
+Ultra Plastic=Ultraplastik
+Wall monitor=Wandmonitor
+Wall monitors=Wandmonitore
+Wind tower=Windturm
+bar=Balken
+black detail=Schwarz detailiert
+black octagon=Schwarz achteckig
+black pipe=Schwarz röhrenförmig
+black stripe light=Schwarz Streifenlicht
+black tile=Schwarze Fliese
+black vent=Schwarzer Ventilator
+black vent block=Schwarzer Ventilator Block
+black wall=Schwarze Wand
+black wall screen=Schwarzer Wandbildschirm
+black wallpanel=Schwarzes Wandtafel
+blinking light=Blinklicht
+block=Block
+blue bars=Blaue Balken
+blue floor=Blauer Boden
+blue lightbox=Blaue Lichtboxen
+blue lines=Blaue Linien
+blue metal=Blaues Metal
+blue metal light=Blaues Metalllicht
+blue stripe light=Blaues Streifenlicht
+blue tile=Blaue Fliese
+bolts=Schrauben
+broken green pipe=Zerbrochenes grünes Rohr
+dark glass=dunkles Glas
+dented metal block=verbeultes Metal
+dirty metal block=schmutziger Metalblock
+disc=Scheibe
+disc shelves=Scheiben-Regal
+dots=Punkte
+electronic screen=elektronischer Bildschirm
+engine=Maschine
+gray power pipe=Graue Energieleitung
+green light=grünes Licht
+green lightbox=grüne Lichtbox
+green lines=grüne Streifen
+green metal=grünes Metal
+green metal block=grüner Metalblock
+green pipe=grüne Rohr
+green pipes=grüne Rohre
+green wall=grüne Wand
+grey bars=graue Balken
+grey metal=graues Metal
+grey tile=graue Fliese
+grey wall=graue Wand
+hazard stripes=Warnstreifen
+light=Licht
+lights=Lichter
+metal block=Metallblock
+metal floormesh=Metallenes Bodennetz
+metal mesh=Metallnetz
+metal wall=Metallwand
+metal with holes=Metall mit Löchern
+panel=Tafel
+plastic==Plastik
+plastic wall=Plastikwand
+red lightbox=rote Lichtbox
+red lines=Rote Streifen
+red metal=rotes Metall
+rough metal=raues Metall
+rusty floor=rostiger Boden
+rusty metal=rostiges Metall
+side pipe=Seitenrohr
+twin lights=Zwillingslicht
+vent=Entlüftung
+wall=Mauer
+wall pipe=Mauerrohre
+white keypad=weiße Schlüsseltafel
+white light stripe=weiße Lichtstreifen
+white octagon=weißes achteckiges
+white tile=weiße Fliese
+white wall base=weiße Wand
+
+### palm_scanner.lua ###
+
+Access denied !=Zutritt verweigert!
+Access granted !=Zutritt gewährt!
+Checking : please wait.=Prüfe : bitte warten.
+Palm scanner=Palmscanner
+
+### panes.lua ###
+
+Doom pane=Endzeitscheibe
+
+### plants.lua ###
+
+Alien=Fremdartige
+Blue Jelly=Blaue Quallen
+Bulb=Glühbirnen
+Curly=Gelockte
+Egg=Eier
+Eye=Augen
+Fern=Farn
+Flower=Blume
+Glow=Glühende
+Grass=Gras
+Green Jelly=Grüne Quallen
+Pink=Rosa
+Plant=Pflanze
+Prickly=Stachelige
+Slug=Schnecken
+Trap=Fallen
+Tree=Baum
+Triffid=Triffidus
+Umbrella=Schirm
+Weeping flower=Weinende Blume
+weed=Unkraut
+
+### switches.lua ###
+
+Wall switch=Mauerschalteer

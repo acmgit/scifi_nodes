@@ -1,3 +1,4 @@
+local S = scifi_nodes.S
 
 -- GENERATED CODE
 -- Node Box Editor, version 0.9.0
@@ -6,7 +7,7 @@ local position1 = nil
 local position2 = nil
 
 minetest.register_node("scifi_nodes:alienslope", {
-	description = "Alien Platform",
+	description = S("Alien Platform"),
 	tiles = {
 		"scifi_nodes_alnslp_top2.png",
 		"scifi_nodes_alnslp_top.png",
@@ -37,7 +38,7 @@ minetest.register_node("scifi_nodes:alienslope", {
 })
 
 minetest.register_node("scifi_nodes:wallpipe", {
-	description = "Alien wall pipe",
+	description = S("Alien wall pipe"),
 	tiles = {
 		"scifi_nodes_wallpipe.png",
 		"scifi_nodes_wallpipe.png",
@@ -66,7 +67,7 @@ minetest.register_node("scifi_nodes:wallpipe", {
 })
 
 minetest.register_node("scifi_nodes:plant_trap", {
-	description = "Hanging Trap Plant",
+	description = S("Hanging Trap Plant"),
 	tiles = {
 		"scifi_nodes_traplant_top.png",
 		"scifi_nodes_traplant_side.png",
@@ -95,7 +96,7 @@ minetest.register_node("scifi_nodes:plant_trap", {
 })
 
 minetest.register_node("scifi_nodes:egg", {
-	description = "Alien Egg",
+	description = S("Alien Egg"),
 	tiles = {
 		"scifi_nodes_egg_top.png",
 		"scifi_nodes_egg_top.png",
@@ -138,7 +139,7 @@ minetest.register_abm({
 end
 
 minetest.register_node("scifi_nodes:pad", {
-	description = "teleport pad",
+	description = S("teleport pad"),
 	tiles = {
 		"scifi_nodes_pad.png",
 		"scifi_nodes_pad.png",
@@ -267,7 +268,7 @@ minetest.register_node("scifi_nodes:pad", {
 })
 
 minetest.register_node("scifi_nodes:pplwndw", {
-	description = "Purple Window",
+	description = S("Purple Window"),
 	tiles = {
 		"scifi_nodes_purple.png",
 		"scifi_nodes_purple.png",
@@ -291,7 +292,7 @@ minetest.register_node("scifi_nodes:pplwndw", {
 })
 
 minetest.register_node("scifi_nodes:gloshroom", {
-	description = "Gloshroom",
+	description = S("Gloshroom"),
 	tiles = {
 		"scifi_nodes_gloshroom.png",
 		"scifi_nodes_gloshroom_under.png",
@@ -322,7 +323,7 @@ minetest.register_node("scifi_nodes:gloshroom", {
 })
 
 minetest.register_node("scifi_nodes:pot_lid", {
-	description = "plant pot lid(place above plant)",
+	description = S("plant pot lid(place above plant)"),
 	tiles = {
 		"scifi_nodes_glass2.png",
 		"scifi_nodes_glass2.png",
@@ -363,7 +364,7 @@ minetest.register_node("scifi_nodes:pot_lid", {
 })
 
 minetest.register_node("scifi_nodes:pot", {
-	description = "metal plant pot (right click for lid, shift+rightclick to plant)",
+	description = S("metal plant pot (right click for lid, shift+rightclick to plant)"),
 	tiles = {
 		"scifi_nodes_pot.png",
 		"scifi_nodes_greybolts.png",
@@ -399,7 +400,7 @@ minetest.register_node("scifi_nodes:pot", {
 })
 
 minetest.register_node("scifi_nodes:pot2", {
-	description = "metal wet plant pot(right click for lid, shift+rightclick to plant)",
+	description = S("metal wet plant pot(right click for lid, shift+rightclick to plant)"),
 	tiles = {
 		"scifi_nodes_pot.png^[colorize:black:100",
 		"scifi_nodes_greybolts.png",
@@ -435,7 +436,7 @@ minetest.register_node("scifi_nodes:pot2", {
 })
 
 minetest.register_node("scifi_nodes:lightbar", {
-	description = "ceiling light",
+	description = S("ceiling light"),
 	tiles = {
 		"scifi_nodes_white2.png",
 	},
@@ -461,7 +462,7 @@ minetest.register_node("scifi_nodes:lightbar", {
 })
 
 minetest.register_node("scifi_nodes:light_dynamic", {
-	description = "Wall light",
+	description = S("Wall light"),
 	tiles = {
 		"scifi_nodes_lightoverlay.png",
 	},
@@ -480,7 +481,7 @@ minetest.register_node("scifi_nodes:light_dynamic", {
 })
 
 minetest.register_node("scifi_nodes:ladder", {
-	description = "Metal Ladder",
+	description = S("Metal Ladder"),
 	tiles = {
 		"scifi_nodes_ladder.png",
 	},
@@ -515,7 +516,7 @@ minetest.register_node("scifi_nodes:ladder", {
 })
 
 minetest.register_node("scifi_nodes:lightbars", {
-	description = "orange lightbars",
+	description = S("orange lightbars"),
 	tiles = {
 		"scifi_nodes_orange2.png",
 	},
@@ -537,7 +538,7 @@ minetest.register_node("scifi_nodes:lightbars", {
 })
 
 minetest.register_node("scifi_nodes:liquid_pipe", {
-	description = "Liquid pipe",
+	description = S("Liquid pipe"),
 tiles = {{
 		name = "scifi_nodes_liquid.png",
 		animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 1.00},
@@ -558,7 +559,7 @@ tiles = {{
 })
 
 minetest.register_node("scifi_nodes:liquid_pipe2", {
-	description = "Liquid pipe 2",
+	description = S("Liquid pipe 2"),
 tiles = {
 		"scifi_nodes_orange.png",
 	},
@@ -622,7 +623,7 @@ minetest.register_node("scifi_nodes:powered_stand", {
 })
 
 minetest.register_node("scifi_nodes:cover", {
-	description = "Metal cover",
+	description = S("Metal cover"),
 	tiles = {
 		"scifi_nodes_pwrstnd_top.png",
 		"scifi_nodes_pwrstnd_top.png",
@@ -646,7 +647,7 @@ minetest.register_node("scifi_nodes:cover", {
 })
 
 minetest.register_node("scifi_nodes:computer", {
-	description = "computer",
+	description = S("computer"),
 	tiles = {
 		"scifi_nodes_black.png",
 		"scifi_nodes_black.png",
@@ -669,7 +670,7 @@ minetest.register_node("scifi_nodes:computer", {
 })
 
 minetest.register_node("scifi_nodes:keysmonitor", {
-	description = "Keyboard and monitor",
+	description = S("Keyboard and monitor"),
 	tiles = {
 		"scifi_nodes_keyboard.png",
 		"scifi_nodes_black.png",
@@ -695,7 +696,7 @@ minetest.register_node("scifi_nodes:keysmonitor", {
 })
 
 minetest.register_node("scifi_nodes:microscope", {
-	description = "Microscope",
+	description = S("Microscope"),
 	tiles = {
 		"scifi_nodes_white.png",
 		"scifi_nodes_black.png",
@@ -722,7 +723,7 @@ minetest.register_node("scifi_nodes:microscope", {
 })
 
 minetest.register_node("scifi_nodes:table", {
-	description = "Metal table",
+	description = S("Metal table"),
 	tiles = {
 		"scifi_nodes_grey.png",
 		"scifi_nodes_grey.png",
@@ -751,7 +752,7 @@ minetest.register_node("scifi_nodes:table", {
 })
 
 minetest.register_node("scifi_nodes:laptop_open", {
-	description = "laptop",
+	description = S("laptop"),
 	tiles = {
 		"scifi_nodes_lapkey.png",
 		"scifi_nodes_black.png",
@@ -778,7 +779,7 @@ minetest.register_node("scifi_nodes:laptop_open", {
 })
 
 minetest.register_node("scifi_nodes:laptop_closed", {
-	description = "laptop",
+	description = S("laptop"),
 	tiles = {
 		"scifi_nodes_black.png",
 		"scifi_nodes_black.png",
@@ -804,7 +805,7 @@ minetest.register_node("scifi_nodes:laptop_closed", {
 })
 
 minetest.register_node("scifi_nodes:pipen", {
-	description = "pipe(nodebox)",
+	description = S("pipe(nodebox)"),
 	tiles = {
 		"scifi_nodes_blacktile2.png",
 		"scifi_nodes_blacktile2.png",
@@ -835,7 +836,7 @@ minetest.register_node("scifi_nodes:pipen", {
 })
 
 minetest.register_node("scifi_nodes:windowcorner", {
-	description = "strong window corner",
+	description = S("strong window corner"),
 	tiles = {
 		"scifi_nodes_glassstrngsd2.png",
 		"scifi_nodes_white.png",
@@ -866,7 +867,7 @@ minetest.register_node("scifi_nodes:windowcorner", {
 })
 
 minetest.register_node("scifi_nodes:windowstraight", {
-	description = "strong window",
+	description = S("strong window"),
 	tiles = {
 		"scifi_nodes_glassstrngsd2.png",
 		"scifi_nodes_white.png",
@@ -893,7 +894,7 @@ minetest.register_node("scifi_nodes:windowstraight", {
 })
 
 minetest.register_node("scifi_nodes:windowcorner2", {
-	description = "strong window corner(black)",
+	description = S("strong window corner(black)"),
 	tiles = {
 		"scifi_nodes_glassstrngsd4.png",
 		"scifi_nodes_black.png",
@@ -924,7 +925,7 @@ minetest.register_node("scifi_nodes:windowcorner2", {
 })
 
 minetest.register_node("scifi_nodes:windowstraight2", {
-	description = "strong window(black)",
+	description = S("strong window(black)"),
 	tiles = {
 		"scifi_nodes_glassstrngsd4.png",
 		"scifi_nodes_black.png",
@@ -953,7 +954,7 @@ minetest.register_node("scifi_nodes:windowstraight2", {
 
 
 minetest.register_node("scifi_nodes:capsule", {
-	description = "sample capsule",
+	description = S("sample capsule"),
 	tiles = {
 		"scifi_nodes_capsule.png",
 		"scifi_nodes_capsule.png",
@@ -983,7 +984,7 @@ minetest.register_node("scifi_nodes:capsule", {
 })
 
 minetest.register_node("scifi_nodes:capsule3", {
-	description = "sample capsule",
+	description = S("sample capsule"),
 	tiles = {
 		"scifi_nodes_capsule3.png",
 		"scifi_nodes_capsule3.png",
@@ -1013,7 +1014,7 @@ minetest.register_node("scifi_nodes:capsule3", {
 })
 
 minetest.register_node("scifi_nodes:capsule2", {
-	description = "sample capsule",
+	description = S("sample capsule"),
 	tiles = {
 		"scifi_nodes_capsule2.png",
 		"scifi_nodes_capsule2.png",
@@ -1043,7 +1044,7 @@ minetest.register_node("scifi_nodes:capsule2", {
 })
 
 minetest.register_node("scifi_nodes:itemholder", {
-	description = "item holder",
+	description = S("item holder"),
 	tiles = {
 		"scifi_nodes_box_top.png",
 		"scifi_nodes_box_top.png",
@@ -1102,7 +1103,7 @@ minetest.register_node("scifi_nodes:itemholder", {
 })
 
 minetest.register_node("scifi_nodes:glassscreen", {
-	description = "glass screen",
+	description = S("glass screen"),
 	tiles = {
 		"scifi_nodes_glscrn.png",
 		"scifi_nodes_glscrn.png",
@@ -1130,7 +1131,7 @@ minetest.register_node("scifi_nodes:glassscreen", {
 
 
 minetest.register_node("scifi_nodes:widescreen", {
-	description = "widescreen",
+	description = S("widescreen"),
 	tiles = {
 		"scifi_nodes_black.png",
 		"scifi_nodes_black.png",
@@ -1160,7 +1161,7 @@ minetest.register_node("scifi_nodes:widescreen", {
 })
 
 minetest.register_node("scifi_nodes:tallscreen", {
-	description = "tallscreen",
+	description = S("tallscreen"),
 	tiles = {
 		"scifi_nodes_black.png",
 		"scifi_nodes_black.png",
@@ -1191,7 +1192,7 @@ minetest.register_node("scifi_nodes:tallscreen", {
 
 -- https://forum.minetest.net/viewtopic.php?f=10&t=13125&p=261481#p261481
 minetest.register_node("scifi_nodes:windowpanel", {
-    description = "strong window panel",
+    description = S("strong window panel"),
     tiles = {
         "scifi_nodes_glass.png",
     },

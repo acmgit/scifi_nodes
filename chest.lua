@@ -1,3 +1,4 @@
+local S = scifi_nodes.S
 
 --chest code from default(Copyright (C) 2012 celeron55, Perttu Ahola <celeron55@gmail.com>)
 
@@ -37,7 +38,7 @@ end
 
 --chest code Copyright (C) 2011-2012 celeron55, Perttu Ahola <celeron55@gmail.com>
 minetest.register_node("scifi_nodes:crate", {
-	description = "Crate",
+	description = S("Crate"),
 	tiles = {"scifi_nodes_crate.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 1, oddly_breakable_by_hand = 2, fuel = 8},
@@ -49,7 +50,7 @@ minetest.register_node("scifi_nodes:crate", {
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec", chest_formspec)
-		meta:set_string("infotext", "Crate")
+		meta:set_string("infotext", S("Crate"))
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8 * 4)
 	end,
@@ -69,7 +70,7 @@ minetest.register_node("scifi_nodes:crate", {
 })
 
 minetest.register_node("scifi_nodes:box", {
-	description = "Storage box",
+	description = S("Storage box"),
 	tiles = {
 		"scifi_nodes_box_top.png",
 		"scifi_nodes_box_top.png",

@@ -1,3 +1,4 @@
+local S = scifi_nodes.S
 
 --------------
 -- Switches --
@@ -21,7 +22,7 @@ local function toggle_switch(pos)
 end
 
 minetest.register_node("scifi_nodes:switch_on", {
-	description = "Wall switch",
+	description = S("Wall switch"),
 	sunlight_propagates = true,
 	buildable_to = false,
 	tiles = {"scifi_nodes_switch_on.png",},
@@ -45,7 +46,7 @@ minetest.register_node("scifi_nodes:switch_on", {
 })
 
 minetest.register_node("scifi_nodes:switch_off", {
-	description = "Wall switch",
+	description = S("Wall switch"),
 	tiles = {"scifi_nodes_switch_off.png",},
 	inventory_image = "scifi_nodes_switch_on.png",
 	wield_image = "scifi_nodes_switch_on.png",

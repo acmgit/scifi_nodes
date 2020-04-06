@@ -1,10 +1,11 @@
 --some code taken from moreblocks(the collision and selection boxes), license below:
 --Copyright (c) 2011-2015 Calinou and contributors.
 --Licensed under the zlib license.
+local S = scifi_nodes.S
 
 function scifi_nodes.register_slope(name, desc, texture, light)
 minetest.register_node("scifi_nodes:slope_"..name, {
-	description = desc.." Slope",
+	description = desc.. " " .. S("Slope"),
 	sunlight_propagates = false,
 	drawtype = "mesh",
 	mesh = "scifi_nodes_slope.obj",

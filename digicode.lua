@@ -1,3 +1,4 @@
+local S = scifi_nodes.S
 
 --------------
 -- Digicode --
@@ -109,7 +110,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 end)
 
 minetest.register_node("scifi_nodes:digicode_on", {
-	description = "Digicode",
+	description = S("Digicode"),
 	sunlight_propagates = true,
 	buildable_to = false,
 	tiles = {"scifi_nodes_digicode_on.png",},
@@ -133,7 +134,7 @@ minetest.register_node("scifi_nodes:digicode_on", {
 })
 
 minetest.register_node("scifi_nodes:digicode_off", {
-	description = "Digicode",
+	description = S("Digicode"),
 	tiles = {"scifi_nodes_digicode_off.png",},
 	inventory_image = "scifi_nodes_digicode_off.png",
 	wield_image = "scifi_nodes_digicode_off.png",

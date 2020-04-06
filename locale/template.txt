@@ -1,0 +1,204 @@
+# textdomain: scifi_nodes
+
+
+### builder.lua ###
+
+Node Builder=
+Sci-fi Node Builder=
+
+### chest.lua ###
+
+Crate=
+Storage box=
+
+### digicode.lua ###
+
+Digicode=
+
+### doors.lua ###
+
+ sliding door=
+
+### models.lua ###
+
+Slope=
+
+### nodeboxes.lua ###
+
+Alien Egg=
+Alien Platform=
+Alien wall pipe=
+Gloshroom=
+Hanging Trap Plant=
+Keyboard and monitor=
+Liquid pipe=
+Liquid pipe 2=
+Metal Ladder=
+Metal cover=
+Metal table=
+Microscope=
+Purple Window=
+Wall light=
+ceiling light=
+computer=
+glass screen=
+item holder=
+laptop=
+
+metal plant pot (right click for lid, shift+rightclick to plant)=
+
+metal wet plant pot(right click for lid, shift+rightclick to plant)=
+
+orange lightbars=
+pipe(nodebox)=
+plant pot lid(place above plant)=
+sample capsule=
+strong window=
+strong window corner=
+strong window corner(black)=
+strong window panel=
+strong window(black)=
+tallscreen=
+teleport pad=
+widescreen=
+
+### nodes.lua ###
+
+Black plate=
+Black vent=
+Blue=
+Blue Grid=
+Blue wall light=
+Brown Doom floor=
+Damaged black wall=
+Dirt With Alien Grass=
+Doom engine wall=
+Doom floor=
+Doom light=
+Doom wall=
+Fan=
+Green=
+Green metal block=
+Junk=
+Moonstone=
+Octagon Glass=
+Orange=
+Purple=
+Purple node=
+Purple tile=
+Purple wall=
+Super Plastic=
+Ultra Plastic=
+Wall monitor=
+Wall monitors=
+Wind tower=
+bar=
+black detail=
+black octagon=
+black pipe=
+black stripe light=
+black tile=
+black vent=
+black vent block=
+black wall=
+black wall screen=
+black wallpanel=
+blinking light=
+block=
+blue bars=
+blue floor=
+blue lightbox=
+blue lines=
+blue metal=
+blue metal light=
+blue stripe light=
+blue tile=
+bolts=
+broken green pipe=
+dark glass=
+dented metal block=
+dirty metal block=
+disc=
+disc shelves=
+dots=
+electronic screen=
+engine=
+gray power pipe=
+green light=
+green lightbox=
+green lines=
+green metal=
+green metal block=
+green pipe=
+green pipes=
+green wall=
+grey bars=
+grey metal=
+grey tile=
+grey wall=
+hazard stripes=
+light=
+lights=
+metal block=
+metal floormesh=
+metal mesh=
+metal wall=
+metal with holes=
+panel=
+plastic=
+plastic wall=
+red lightbox=
+red lines=
+red metal=
+rough metal=
+rusty floor=
+rusty metal=
+side pipe=
+twin lights=
+vent=
+wall=
+wall pipe=
+white keypad=
+white light stripe=
+white octagon=
+white tile=
+white wall base=
+
+### palm_scanner.lua ###
+
+Access denied !=
+Access granted !=
+Checking : please wait.=
+Palm scanner=
+
+### panes.lua ###
+
+Doom pane=
+
+### plants.lua ###
+
+Alien=
+Blue Jelly=
+Bulb=
+Curly=
+Egg=
+Eye=
+Fern=
+Flower=
+Glow=
+Grass=
+Green Jelly=
+Pink=
+Plant=
+Prickly=
+Slug=
+Trap=
+Tree=
+Triffid=
+Umbrella=
+Weeping flower=
+weed=
+
+### switches.lua ###
+
+Wall switch=

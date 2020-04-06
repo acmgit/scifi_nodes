@@ -1,5 +1,7 @@
+local S = scifi_nodes.S
+
 xpanes.register_pane("doompane", {
-	description = "Doom pane",
+	description = S("Doom pane"),
 	tiles = {"xpanes_space.png"},
 	drawtype = "airlike",
 	paramtype = "light",

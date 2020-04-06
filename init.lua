@@ -3,6 +3,14 @@
 scifi_nodes = {}
 
 local MP = minetest.get_modpath("scifi_nodes")
+local S
+if(minetest.get_translator ~= nil) then
+    S = minetest.get_translator("scifi_nodes")
+else
+    S = function(s) return s end
+end
+
+scifi_nodes.S = S
 
 if minetest.get_modpath("xpanes") then
 	dofile(MP.."/panes.lua")

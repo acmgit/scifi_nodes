@@ -1,21 +1,22 @@
+local S = scifi_nodes.S
 
 local plants = {
-	{"flower1", "Glow Flower", 1,0, default.LIGHT_MAX},
-	{"flower2", "Pink Flower", 1.5,0, 10},
-	{"flower3", "Triffid", 2,5, 0},
-	{"flower4", "Weeping flower", 1.5,0, 0},
-	{"plant1", "Bulb Plant", 1,0, 0},
-	{"plant2", "Trap Plant", 1.5,0, default.LIGHT_MAX},
-	{"plant3", "Blue Jelly Plant", 1.2,0, 10},
-	{"plant4", "Green Jelly Plant", 1.2,0, 10},
-	{"plant5", "Fern Plant", 1.7,0, 0},
-	{"plant6", "Curly Plant", 1,0, 10},
-	{"plant7", "Egg weed", 1,0, 0},
-	{"plant8", "Slug weed", 1,0, 10},
-	{"plant9", "Prickly Plant", 1,0, 0},
-	{"plant10", "Umbrella weed", 1,0, 10},
-	{"eyetree", "Eye Tree", 2.5,0, 0},
-	{"grass", "Alien Grass", 1,0, 0},
+	{"flower1", S("Glow") .. " " .. S("Flower"), 1,0, default.LIGHT_MAX},
+	{"flower2", S("Pink") .. " " .. S("Flower"), 1.5,0, 10},
+	{"flower3", S("Triffid"), 2,5, 0},
+	{"flower4", S("Weeping flower"), 1.5,0, 0},
+	{"plant1", S("Bulb") .. " " .. S("Plant"), 1,0, 0},
+	{"plant2", S("Trap") .. " " .. S("Plant"), 1.5,0, default.LIGHT_MAX},
+	{"plant3", S("Blue Jelly") .. " " .. S("Plant"), 1.2,0, 10},
+	{"plant4", S("Green Jelly") .. " " .. S("Plant"), 1.2,0, 10},
+	{"plant5", S("Fern") .. " " .. S("Plant"), 1.7,0, 0},
+	{"plant6", S("Curly") .. " " .. S("Plant"), 1,0, 10},
+	{"plant7", S("Egg") .. " " .. S("weed"), 1,0, 0},
+	{"plant8", S("Slug") .. " " .. S("weed"), 1,0, 10},
+	{"plant9", S("Prickly") .. " " .. S("Plant"), 1,0, 0},
+	{"plant10", S("Umbrella") .. " " .. S("weed"), 1,0, 10},
+	{"eyetree", S("Eye") .. " " .. S("Tree"), 2.5,0, 0},
+	{"grass", S("Alien") .. " " .. S("Grass"), 1,0, 0},
 }
 
 for _, row in ipairs(plants) do

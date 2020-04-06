@@ -1,4 +1,4 @@
-
+local S = scifi_nodes.S
 
 -----------------------------------------------
 --             Palm scanner                  --
@@ -18,18 +18,18 @@ local function activate_palm_scanner(pos, node, player)
 	minetest.swap_node(pos, node)
 
 	minetest.sound_play("scifi_nodes_palm_scanner", {max_hear_distance = 8, pos = pos, gain = 1.0})
-	minetest.chat_send_player(name, "Checking : please wait.")
+	minetest.chat_send_player(name, S("Checking : please wait."))
 
 	-- check protection
 	minetest.after(2, function()
 		if minetest.is_protected(pos, name or "") then
 			-- clicker has no access to area
-			minetest.chat_send_player(name, "Access denied !")
+			minetest.chat_send_player(name, S("Access denied !"))
 			minetest.sound_play("scifi_nodes_scanner_refused", {max_hear_distance = 8, pos = pos, gain = 1.0})
 
 		else
 			-- clicker can build here
-			minetest.chat_send_player(name, "Access granted !")
+			minetest.chat_send_player(name, S("Access granted !"))
 			mesecon.receptor_on(pos, scifi_nodes.get_switch_rules(node.param2))
 
 		end
@@ -44,7 +44,7 @@ local function activate_palm_scanner(pos, node, player)
 end
 
 minetest.register_node("scifi_nodes:palm_scanner_off", {
-	description = "Palm scanner",
+	description = S("Palm scanner"),
 	tiles = {"scifi_nodes_palm_scanner_off.png",},
 	inventory_image = "scifi_nodes_palm_scanner_off.png",
 	wield_image = "scifi_nodes_palm_scanner_on.png",
@@ -66,7 +66,7 @@ minetest.register_node("scifi_nodes:palm_scanner_off", {
 })
 
 minetest.register_node("scifi_nodes:palm_scanner_checking", {
-	description = "Palm scanner",
+	description = S("Palm scanner"),
 	tiles = {{
 		name = "scifi_nodes_palm_scanner_checking.png",
 		animation = {type = "vertical_frames",aspect_w = 16,aspect_h = 16,length = 1.5}
@@ -84,7 +84,7 @@ minetest.register_node("scifi_nodes:palm_scanner_checking", {
 })
 
 minetest.register_node("scifi_nodes:palm_scanner_on", {
-	description = "Palm scanner",
+	description = S("Palm scanner"),
 	sunlight_propagates = true,
 	buildable_to = false,
 	tiles = {"scifi_nodes_palm_scanner_on.png",},

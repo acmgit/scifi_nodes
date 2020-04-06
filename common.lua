@@ -1,5 +1,4 @@
 
-
 scifi_nodes.get_switch_rules = function(param2)
 
 	-- param2 = 2

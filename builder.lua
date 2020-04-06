@@ -1,4 +1,4 @@
-
+local S = scifi_nodes.S
 
 --the builder node
 
@@ -35,7 +35,7 @@ local input_items = {
 }
 
 minetest.register_node("scifi_nodes:builder", {
-	description = "Sci-fi Node Builder",
+	description = S("Sci-fi Node Builder"),
 	tiles = {
 		"scifi_nodes_builder.png",
 		"scifi_nodes_builder.png",
@@ -50,7 +50,7 @@ minetest.register_node("scifi_nodes:builder", {
 
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec", builder_formspec)
-		meta:set_string("infotext", "Node Builder")
+		meta:set_string("infotext", S("Node Builder"))
 		local inv = meta:get_inventory()
 		inv:set_size("output", 4 * 3)
 		inv:set_size("input", 1 * 1)

@@ -1,8 +1,9 @@
+local S = scifi_nodes.S
 
 --nodes
 
 minetest.register_node("scifi_nodes:grassblk", {
-	description = "Dirt With Alien Grass",
+	description = S("Dirt With Alien Grass"),
 	tiles = {"default_grass.png^[colorize:cyan:80", "default_dirt.png",
 		{name = "default_dirt.png^(default_grass_side.png^[colorize:cyan:80)",
 			tileable_vertical = false}},
@@ -11,7 +12,7 @@ minetest.register_node("scifi_nodes:grassblk", {
 })
 
 minetest.register_node("scifi_nodes:light", {
-	description = "blue lightbox",
+	description = S("blue lightbox"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_lighttop.png",
@@ -27,7 +28,7 @@ minetest.register_node("scifi_nodes:light", {
 })
 
 minetest.register_node("scifi_nodes:rfloor", {
-	description = "rusty floor",
+	description = S("rusty floor"),
 	tiles = {
 		"scifi_nodes_rustfloor.png",
 	},
@@ -39,7 +40,7 @@ minetest.register_node("scifi_nodes:rfloor", {
 })
 
 minetest.register_node("scifi_nodes:bfloor", {
-	description = "blue floor",
+	description = S("blue floor"),
 	tiles = {
 		"scifi_nodes_bluefloor.png",
 	},
@@ -52,7 +53,7 @@ minetest.register_node("scifi_nodes:bfloor", {
 
 
 minetest.register_node("scifi_nodes:stripes2", {
-	description = "hazard stripes2",
+	description = S("hazard stripes") .. "2",
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_stripes2top.png",
@@ -68,7 +69,7 @@ minetest.register_node("scifi_nodes:stripes2", {
 })
 
 minetest.register_node("scifi_nodes:gblock", {
-	description = "Green metal block",
+	description = S("Green metal block"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_gblock.png",
@@ -84,7 +85,7 @@ minetest.register_node("scifi_nodes:gblock", {
 })
 
 minetest.register_node("scifi_nodes:gblock2", {
-	description = "Green metal block 2",
+	description = S("Green metal block") .. " 2",
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_gblock2_top.png",
@@ -101,7 +102,7 @@ minetest.register_node("scifi_nodes:gblock2", {
 })
 
 minetest.register_node("scifi_nodes:gblock3", {
-	description = "Green metal block 3",
+	description = S("Green metal block") .. " 3",
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_gblock2_top.png",
@@ -120,7 +121,7 @@ minetest.register_node("scifi_nodes:gblock3", {
 
 
 minetest.register_node("scifi_nodes:green_light", {
-	description = "green lightbox",
+	description = S("green lightbox"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_lighttop.png",
@@ -137,7 +138,7 @@ minetest.register_node("scifi_nodes:green_light", {
 })
 
 minetest.register_node("scifi_nodes:red_light", {
-	description = "red lightbox",
+	description = S("red lightbox"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_lighttop.png",
@@ -154,7 +155,7 @@ minetest.register_node("scifi_nodes:red_light", {
 })
 
 minetest.register_node("scifi_nodes:discs", {
-	description = "disc shelves",
+	description = S("disc shelves"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_box_top.png",
@@ -170,7 +171,7 @@ minetest.register_node("scifi_nodes:discs", {
 })
 
 minetest.register_node("scifi_nodes:disc", {
-	description = "disc",
+	description = S("disc"),
 	drawtype = "torchlike",
 	sunlight_propagates = false,
 	tiles = {
@@ -184,7 +185,7 @@ minetest.register_node("scifi_nodes:disc", {
 
 
 minetest.register_node("scifi_nodes:blink", {
-	description = "blinking light",
+	description = S("blinking light"),
 	sunlight_propagates = false,
 	tiles = {{
 		name="scifi_nodes_lightbox.png",
@@ -197,7 +198,7 @@ minetest.register_node("scifi_nodes:blink", {
 })
 
 minetest.register_node("scifi_nodes:black_lights", {
-	description = "black wallpanel",
+	description = S("black wallpanel"),
 	sunlight_propagates = false,
 	tiles = {{
 		name="scifi_nodes_black_lights.png",
@@ -209,7 +210,7 @@ minetest.register_node("scifi_nodes:black_lights", {
 })
 
 minetest.register_node("scifi_nodes:black_screen", {
-	description = "black wall screen",
+	description = S("black wall screen"),
 	sunlight_propagates = false,
 	tiles = {{
 		name="scifi_nodes_black_screen.png",
@@ -222,7 +223,7 @@ minetest.register_node("scifi_nodes:black_screen", {
 })
 
 minetest.register_node("scifi_nodes:screen", {
-	description = "electronic screen",
+	description = S("electronic screen"),
 	sunlight_propagates = false,
 	tiles = {{
 		name="scifi_nodes_screen.png",
@@ -235,7 +236,7 @@ minetest.register_node("scifi_nodes:screen", {
 })
 
 minetest.register_node("scifi_nodes:screen2", {
-	description = "electronic screen 2",
+	description = S("electronic screen") .. " 2",
 	sunlight_propagates = false,
 	tiles = {{
 		name="scifi_nodes_screen2.png",
@@ -250,7 +251,7 @@ minetest.register_node("scifi_nodes:screen2", {
 
 
 minetest.register_node("scifi_nodes:white_pad", {
-	description = "white keypad",
+	description = S("white keypad"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_white2.png",
@@ -267,7 +268,7 @@ minetest.register_node("scifi_nodes:white_pad", {
 })
 
 minetest.register_node("scifi_nodes:white_base", {
-	description = "white wall base",
+	description = S("white wall base"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_white2.png",
@@ -284,7 +285,7 @@ minetest.register_node("scifi_nodes:white_base", {
 })
 
 minetest.register_node("scifi_nodes:grnpipe", {
-	description = "green pipe",
+	description = S("green pipe"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_greenpipe_front.png",
@@ -303,7 +304,7 @@ minetest.register_node("scifi_nodes:grnpipe", {
 
 
 minetest.register_node("scifi_nodes:grnpipe2", {
-	description = "broken green pipe",
+	description = S("broken green pipe"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_greenpipe_front.png",
@@ -321,7 +322,7 @@ minetest.register_node("scifi_nodes:grnpipe2", {
 })
 
 minetest.register_node("scifi_nodes:octrng", {
-	description = "Orange Octagon Glass",
+	description = S("Orange") .. " " .. S("Octagon Glass"),
 	sunlight_propagates = false,
 	drawtype = "glasslike",
 	tiles = {
@@ -336,7 +337,7 @@ minetest.register_node("scifi_nodes:octrng", {
 })
 
 minetest.register_node("scifi_nodes:octgrn", {
-	description = "Green Octagon Glass",
+	description = S("Green") .. " " .. S("Octagon Glass"),
 	sunlight_propagates = false,
 	drawtype = "glasslike",
 	tiles = {
@@ -351,7 +352,7 @@ minetest.register_node("scifi_nodes:octgrn", {
 })
 
 minetest.register_node("scifi_nodes:octbl", {
-	description = "Blue Octagon Glass",
+	description = S("Blue") .. " " .. S("Octagon Glass"),
 	sunlight_propagates = false,
 	drawtype = "glasslike",
 	tiles = {
@@ -366,7 +367,7 @@ minetest.register_node("scifi_nodes:octbl", {
 })
 
 minetest.register_node("scifi_nodes:octppl", {
-	description = "Purple Octagon Glass",
+	description = S("Purple") .. " " .. S("Octagon Glass"),
 	sunlight_propagates = false,
 	drawtype = "glasslike",
 	tiles = {
@@ -381,7 +382,7 @@ minetest.register_node("scifi_nodes:octppl", {
 })
 
 minetest.register_node("scifi_nodes:tower", {
-	description = "Wind tower",
+	description = S("Wind tower"),
 	sunlight_propagates = false,
 	drawtype = "plantlike",
 	tiles = {{
@@ -396,7 +397,7 @@ minetest.register_node("scifi_nodes:tower", {
 })
 
 minetest.register_node("scifi_nodes:junk", {
-	description = "Junk",
+	description = S("Junk"),
 	sunlight_propagates = true,
 	paramtype = "light",
 	liquid_viscosity = 8,
@@ -414,7 +415,7 @@ minetest.register_node("scifi_nodes:junk", {
 
 
 minetest.register_node("scifi_nodes:blumetlight", {
-	description = "blue metal light",
+	description = S("blue metal light"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_bluemetal.png",
@@ -432,7 +433,7 @@ minetest.register_node("scifi_nodes:blumetlight", {
 
 
 minetest.register_node("scifi_nodes:lightstp", {
-	description = "twin lights",
+	description = S("twin lights"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_lightstripe.png"
@@ -444,7 +445,7 @@ minetest.register_node("scifi_nodes:lightstp", {
 })
 
 minetest.register_node("scifi_nodes:blklt2", {
-	description = "black stripe light",
+	description = S("black stripe light"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_black_light2.png"
@@ -456,7 +457,7 @@ minetest.register_node("scifi_nodes:blklt2", {
 })
 
 minetest.register_node("scifi_nodes:blumetstr", {
-	description = "blue stripe light",
+	description = S("blue stripe light"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_blue_metal_stripes2.png"
@@ -468,7 +469,7 @@ minetest.register_node("scifi_nodes:blumetstr", {
 })
 
 minetest.register_node("scifi_nodes:glass", {
-	description = "dark glass",
+	description = S("dark glass"),
 	drawtype = "glasslike",
 	sunlight_propagates = true,
 	tiles = {
@@ -481,7 +482,7 @@ minetest.register_node("scifi_nodes:glass", {
 })
 
 minetest.register_node("scifi_nodes:whtlightbnd", {
-	description = "white light stripe",
+	description = S("white light stripe"),
 	sunlight_propagates = false,
 	tiles = {
 		"scifi_nodes_lightband.png"
@@ -500,90 +501,90 @@ minetest.register_node("scifi_nodes:whtlightbnd", {
 -- colors available. When crafting, the last recipes will be checked first.
 --add new block using texture name(without "scifi_nodes_" prefix) then the description, and then the name of the block
 local nodetypes = {
-	{"blue",      "blue lines",        "blue"},
-	{"holes",       "metal with holes","holes"},
-	{"white2",      "plastic",         "white2"},
-    {"super_white",      "Super Plastic",         "super_white", 11},
-    {"ultra_white",      "Ultra Plastic",         "ultra_white", default.LIGHT_MAX},
-	{"engine",      "engine",          "engine"},
-	{"wall",      "metal wall",        "wall"},
-	{"white",      "plastic wall",     "white"},
-	{"stripes2top",     "dirty metal block","metal2"},
-	{"rough",      "rough metal",      "rough"},
-	{"lighttop",      "metal block",      "metal"},
-	{"red",      "red lines",          "red"},
-	{"green",      "green lines",      "green"},
-	{"vent2",      "vent",              "vent"},
-	{"stripes",      "hazard stripes", "stripes"},
-	{"rust",      "rusty metal",       "rust"},
-	{"mesh",      "metal mesh",       "mesh"},
-	{"black",      "black wall",       "black"},
-	{"blackoct",      "black octagon",       "blackoct"},
-	{"blackpipe",      "black pipe",       "blackpipe"},
-	{"blacktile",      "black tile",       "blktl"},
-	{"blacktile2",      "black tile 2",       "blktl2"},
-	{"blackvent",      "black vent",       "blkvnt"},
-	{"bluebars",      "blue bars",       "bluebars"},
-	{"bluemetal",      "blue metal",       "blumtl"},
-	{"bluetile",      "blue tile",       "blutl"},
-	{"greytile",      "grey tile",       "grytl"},
-	{"mesh2",      "metal floormesh",       "mesh2"},
-	{"white",      "plastic wall",       "white"},
-	{"pipe",      "wall pipe",       "pipe2"},
-	{"pipeside",      "side pipe",       "pipe3"},
-	{"tile",      "white tile",       "tile"},
-	{"whiteoct",      "white octagon",       "whiteoct"},
-	{"whitetile",      "white tile2",       "whttl"},
-	{"black_detail",      "black detail",       "blckdtl"},
-	{"green_square",      "green metal block",       "grnblck"},
-	{"red_square",      "red metal block",       "redblck"},
-	{"grey_square",      "grey metal block",       "greyblck"},
-	{"blue_square",      "blue metal block",       "blublck"},
-	{"black_mesh",      "black vent block",       "blckmsh"},
-	{"dent",      "dented metal block",       "dent"},
-	{"greenmetal",      "green metal wall",       "grnmetl"},
-	{"greenmetal2",      "green metal wall2",       "grnmetl2"},
-	{"greenlights",      "green wall lights",       "grnlt", 10},
-	{"greenlights2",      "green wall lights2",       "grnlt2", 10},
-	{"greenbar",      "green light bar",       "grnlghtbr", 10},
-	{"green2",      "green wall panel",       "grn2"},
-	{"greentubes",      "green pipes",       "grntubes"},
-	{"grey",      "grey wall",       "gry"},
-	{"greybolts",      "grey wall bolts",       "gryblts"},
-	{"greybars",      "grey bars",       "grybrs"},
-	{"greydots",      "grey wall dots",       "grydts"},
-	{"greygreenbar",      "gray power pipe",       "grygrnbr", 10},
-	{"octofloor",      "Doom floor",       "octofloor"},
-	{"octofloor2",      "Brown Doom floor",       "octofloor2"},
-	{"doomwall1",      "Doom wall 1",       "doomwall1"},
-	{"doomwall2",      "Doom wall 2",       "doomwall2"},
-	{"doomwall3",      "Doom wall 3",       "doomwall3"},
-	{"doomwall4",      "Doom wall 4",       "doomwall4"},
-	{"doomwall41",      "Doom wall 4.1",       "doomwall4.1"},
-	{"doomwall42",      "Doom wall 4.2",       "doomwall4.2"},
-	{"doomwall43",      "Doom wall 4.3",       "doomwall4.3"},
-	{"doomwall431",      "Doom wall 4.3.1",       "doomwall4.3.1"},
-	{"doomwall44",      "Doom wall 4.4",       "doomwall4.4"},
-	{"blackdmg",      "Damaged black wall",       "blckdmg"},
-	{"blackdmgstripe",      "Damaged black wall(stripes)",       "blckdmgstripe"},
-	{"doomengine",      "Doom engine wall",       "doomengine"},
-	{"monitorwall",      "Wall monitors",       "monitorwall"},
-	{"screen3",      "Wall monitor",       "screen3"},
-	{"doomlight",      "Doom light",       "doomlight", 12},
-	{"bluwllight",      "Blue wall light", "capsule3", default.LIGHT_MAX},
-	{"bluegrid",      "Blue Grid", "bluegrid", 5},
-	{"fan",      "Fan",       "fan"},
-	{"ppllght",      "Purple wall light", "", default.LIGHT_MAX},
-	{"pplwll",      "Purple wall", "", 0},
-	{"pplwll2",      "Purple wall2", "", 0},
-	{"pplwll3",      "Purple wall3", "", 0},
-	{"pplwll4",      "Purple wall4", "", 0},
-	{"pplblk",      "Purple tile", "", 0},
-	{"purple",      "Purple node", "", 0},
-	{"rock",      "Moonstone", "", 0},
-	{"rock2",      "Moonstone2", "", 0},
-	{"blackvnt",      "Black vent", "", 0},
-	{"blackplate",      "Black plate", "", 0},
+	{"blue",      S("blue lines"),        "blue"},
+	{"holes",       S("metal with holes") ,"holes"},
+	{"white2",      S("plastic"),         "white2"},
+    {"super_white",      S("Super Plastic"),         "super_white", 11},
+    {"ultra_white",      S("Ultra Plastic"),         "ultra_white", default.LIGHT_MAX},
+	{"engine",      S("engine"),          "engine"},
+	{"wall",      S("metal wall"),        "wall"},
+	{"white",      S("plastic wall"),     "white"},
+	{"stripes2top",     S("dirty metal block"),"metal2"},
+	{"rough",      S("rough metal"),      "rough"},
+	{"lighttop",      S("metal block"),      "metal"},
+	{"red",      S("red lines"),          "red"},
+	{"green",      S("green lines"),      "green"},
+	{"vent2",      S("vent"),              "vent"},
+	{"stripes",      S("hazard stripes"), "stripes"},
+	{"rust",      S("rusty metal"),       "rust"},
+	{"mesh",      S("metal mesh"),       "mesh"},
+	{"black",      S("black wall"),       "black"},
+	{"blackoct",      S("black octagon"),       "blackoct"},
+	{"blackpipe",      S("black pipe"),       "blackpipe"},
+	{"blacktile",      S("black tile"),       "blktl"},
+	{"blacktile2",      S("black tile") .. " 2",       "blktl2"},
+	{"blackvent",      S("black vent"),       "blkvnt"},
+	{"bluebars",      S("blue bars"),       "bluebars"},
+	{"bluemetal",      S("blue metal"),       "blumtl"},
+	{"bluetile",      S("blue tile"),       "blutl"},
+	{"greytile",      S("grey tile"),       "grytl"},
+	{"mesh2",      S("metal floormesh"),       "mesh2"},
+	{"white",      S("plastic wall"),       "white"},
+	{"pipe",      S("wall pipe"),       "pipe2"},
+	{"pipeside",      S("side pipe"),       "pipe3"},
+	{"tile",      S("white tile"),       "tile"},
+	{"whiteoct",      S("white octagon"),       "whiteoct"},
+	{"whitetile",      S("white tile") .. "2",       "whttl"},
+	{"black_detail",      S("black detail"),       "blckdtl"},
+	{"green_square",      S("green metal block"),       "grnblck"},
+	{"red_square",      S("red metal") .. " " .. S("block"),       "redblck"},
+	{"grey_square",      S("grey metal") .. " " .. S("block"),       "greyblck"},
+	{"blue_square",      S("blue metal") .. " " .. S("block"),       "blublck"},
+	{"black_mesh",      S("black vent block"),       "blckmsh"},
+	{"dent",      S("dented metal block"),       "dent"},
+	{"greenmetal",      S("green metal") .. " " .. S("wall"),       "grnmetl"},
+	{"greenmetal2",      S("green metal") .. " " .. S("wall") .. "2",       "grnmetl2"},
+	{"greenlights",      S("green wall") .. " " .. S("lights"),       "grnlt", 10},
+	{"greenlights2",      S("green wall") .. " " .. S("lights") .. "2",       "grnlt2", 10},
+	{"greenbar",      S("green light") .. " " .. S("bar"),       "grnlghtbr", 10},
+	{"green2",      S("green wall") .. " " .. S("panel"),       "grn2"},
+	{"greentubes",      S("green pipes"),       "grntubes"},
+	{"grey",      S("grey wall"),       "gry"},
+	{"greybolts",      S("grey wall") .. " " .. S("bolts"),       "gryblts"},
+	{"greybars",      S("grey bars"),       "grybrs"},
+	{"greydots",      S("grey wall") .. " " .. S("dots"),       "grydts"},
+	{"greygreenbar",      S("gray power pipe"),       "grygrnbr", 10},
+	{"octofloor",      S("Doom floor"),       "octofloor"},
+	{"octofloor2",      S("Brown Doom floor"),       "octofloor2"},
+	{"doomwall1",      S("Doom wall") .. " 1",       "doomwall1"},
+	{"doomwall2",      S("Doom wall") .. " 2",       "doomwall2"},
+	{"doomwall3",      S("Doom wall") .. " 3",       "doomwall3"},
+	{"doomwall4",      S("Doom wall") .. " 4",       "doomwall4"},
+	{"doomwall41",      S("Doom wall") .. " 4.1",       "doomwall4.1"},
+	{"doomwall42",      S("Doom wall") .. " 4.2",       "doomwall4.2"},
+	{"doomwall43",      S("Doom wall") .. " 4.3",       "doomwall4.3"},
+	{"doomwall431",      S("Doom wall") .. " 4.3.1",       "doomwall4.3.1"},
+	{"doomwall44",      S("Doom wall") .. " 4.4",       "doomwall4.4"},
+	{"blackdmg",      S("Damaged black wall"),       "blckdmg"},
+	{"blackdmgstripe",      S("Damaged black wall") .. S"(stripes)",       "blckdmgstripe"},
+	{"doomengine",      S("Doom engine wall"),       "doomengine"},
+	{"monitorwall",      S("Wall monitors"),       "monitorwall"},
+	{"screen3",      S("Wall monitor"),       "screen3"},
+	{"doomlight",      S("Doom light"),       "doomlight", 12},
+	{"bluwllight",      S("Blue wall light"), "capsule3", default.LIGHT_MAX},
+	{"bluegrid",      S("Blue Grid"), "bluegrid", 5},
+	{"fan",      S("Fan"),       "fan"},
+	{"ppllght",      S("Purple wall") .. " " .. S("light"), "", default.LIGHT_MAX},
+	{"pplwll",      S("Purple wall"), "", 0},
+	{"pplwll2",      S("Purple wall") .. "2", "", 0},
+	{"pplwll3",      S("Purple wall") .. "3", "", 0},
+	{"pplwll4",      S("Purple wall") .. "4", "", 0},
+	{"pplblk",      S("Purple tile"), "", 0},
+	{"purple",      S("Purple node"), "", 0},
+	{"rock",      S("Moonstone"), "", 0},
+	{"rock2",      S("Moonstone") .. "2", "", 0},
+	{"blackvnt",      S("Black vent"), "", 0},
+	{"blackplate",      S("Black plate"), "", 0},
 }
 
 for _, row in ipairs(nodetypes) do

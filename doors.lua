@@ -13,6 +13,7 @@
 -- 2. This content is provided 'as-is', without any express or implied warranty. In no event
 -- will the authors be held liable for any damages arising from the use of this content.
 
+local S = scifi_nodes.S
 
 -- Retrieving mod settings
 scifi_nodes.doors_open_with_mesecon_only = minetest.settings:get_bool("scifi_nodes.doors_open_with_mesecon_only", false)
@@ -226,7 +227,7 @@ for _, current_door in ipairs(doors) do
 	if not scifi_nodes.doors_open_with_mesecon_only then doors_rightclick = open_door end
 
 	minetest.register_node(closed, {
-		description = current_door.base_name.." sliding door",
+		description = current_door.base_name.. S(" sliding door"),
 		inventory_image = "scifi_nodes_door_"..base_name.."_inv.png",
 		wield_image = "scifi_nodes_door_"..base_name.."_inv.png",
 		tiles = {
