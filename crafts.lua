@@ -96,11 +96,13 @@ minetest.register_craft({
     }
 })
 
--- 6 ceiling light from 2 plastic and 1  trap super glow glass
+-- 8 ceiling light from 2 plastic and 1 meselamp
+-- Old recipe used "moreblocks:trap_super_glow_glass"
+-- but moreblocks is an optional dependance
 minetest.register_craft({
-    output = "scifi_nodes:lightbar 6",
+    output = "scifi_nodes:lightbar 8",
     recipe = {
-        {"scifi_nodes:white2", "moreblocks:trap_super_glow_glass", "scifi_nodes:white2"}
+        {"scifi_nodes:white2", "default:meselamp", "scifi_nodes:white2"}
     }
 })
 
@@ -189,7 +191,7 @@ minetest.register_craft({
         {"scifi_nodes:black", "scifi_nodes:black", "scifi_nodes:black"}
     }
 })
- 
+
 -- 8 metal block from 8 black wall and 1 iron ingot
 minetest.register_craft({
     output = "scifi_nodes:lighttop 8",
@@ -341,7 +343,11 @@ minetest.register_craft({
     output = "scifi_nodes:keysmonitor",
     recipe = {
         {"scifi_nodes:black", "scifi_nodes:widescreen", "scifi_nodes:black"},
-        {"mesecons_microcontroller:microcontroller0000", "scifi_nodes:black_detail", "mesecons_microcontroller:microcontroller0000"}
+        {
+		"mesecons_microcontroller:microcontroller0000",
+		"scifi_nodes:black_detail",
+		"mesecons_microcontroller:microcontroller0000"
+	}
     }
 })
 
@@ -511,7 +517,7 @@ minetest.register_craft({
     }
 })
 
--- 6 capsule from 1 plastic, 1 glass, 1 orange dye, 1 green dye and 
+-- 6 capsule from 1 plastic, 1 glass, 1 orange dye, 1 green dye and
 -- 1 cyan dye
 minetest.register_craft({
     output = "scifi_nodes:capsule 6",
@@ -606,7 +612,11 @@ minetest.register_craft({
     output = "scifi_nodes:black_lights",
     recipe = {
         {"dye:red", "dye:green", "dye:yellow"},
-        {"mesecons_microcontroller:microcontroller0000", "scifi_nodes:black", "mesecons_microcontroller:microcontroller0000"}
+        {
+		"mesecons_microcontroller:microcontroller0000",
+		"scifi_nodes:black",
+		"mesecons_microcontroller:microcontroller0000"
+	}
     }
 })
 
@@ -645,7 +655,7 @@ minetest.register_craft({
     output = "scifi_nodes:doomwall3 6",
     recipe = {
         {"scifi_nodes:white", "scifi_nodes:white", "scifi_nodes:white"},
-        {"scifi_nodes:black", "dye:red", "scifi_nodes:black"},
+        {"scifi_nodes:black", "dye:grey", "scifi_nodes:black"},
         {"scifi_nodes:white", "scifi_nodes:white", "scifi_nodes:white"}
     }
 })
@@ -1098,7 +1108,7 @@ minetest.register_craft({
         {"scifi_nodes:white2", ""},
         {"scifi_nodes:white2","scifi_nodes:white2"}
     }
-}) 
+})
 
 -- 6 white slope from 3 plastic wall
 minetest.register_craft({

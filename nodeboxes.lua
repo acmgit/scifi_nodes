@@ -2,8 +2,8 @@
 -- GENERATED CODE
 -- Node Box Editor, version 0.9.0
 
-position1 = nil
-position2 = nil
+local position1 = nil
+local position2 = nil
 
 minetest.register_node("scifi_nodes:alienslope", {
 	description = "Alien Platform",
@@ -32,6 +32,7 @@ minetest.register_node("scifi_nodes:alienslope", {
 			{-0.125, 0.375, -0.5, 0.5, 0.5, 0.5}, -- NodeBox17
 		}
 	},
+	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node
 })
 
@@ -61,6 +62,7 @@ minetest.register_node("scifi_nodes:wallpipe", {
 			{-0.5, -0.125, 0, 0.5, 0, 0.0625}, -- NodeBox24
 		}
 	},
+	sounds = default.node_sound_wood_defaults()
 })
 
 minetest.register_node("scifi_nodes:plant_trap", {
@@ -88,7 +90,8 @@ minetest.register_node("scifi_nodes:plant_trap", {
 			{-0.0625, -0.5, -0.0625, 0, -0.4375, 0.375}, -- NodeBox27
 			{-0.0625, -0.5, 0.3125, 0, 0.5, 0.375}, -- NodeBox28
 		}
-	}
+	},
+	sounds = default.node_sound_wood_defaults(),
 })
 
 minetest.register_node("scifi_nodes:egg", {
@@ -118,7 +121,8 @@ minetest.register_node("scifi_nodes:egg", {
 			{-0.1875, 0.6875, -0.1875, 0.1875, 0.75, 0.1875}, -- NodeBox7
 			{-0.125, 0.75, -0.125, 0.125, 0.8125, 0.125}, -- NodeBox8
 			{-0.375, -0.3125, -0.4375, 0.375, 0.3125, 0.4375}, -- NodeBox9
-		}
+		},
+	sounds = default.node_sound_wood_defaults()
 	}
 })
 
@@ -150,13 +154,13 @@ minetest.register_node("scifi_nodes:pad", {
 	on_construct = function(pos, node, placer)
 		local meta = minetest.get_meta(pos)
 		if position1 == nil then
-		position1 = pos
-		meta:set_int("type", 1)
+			position1 = pos
+			meta:set_int("type", 1)
 		elseif position2 == nil then
-		position2 = pos
-		meta:set_int("type", 2)
-		else 
-		minetest.chat_send_all("There can only be two teleportation pads at a time!")
+			position2 = pos
+			meta:set_int("type", 2)
+		else
+			minetest.chat_send_all("There can only be two teleportation pads at a time!")
 		end
 	end,
 	on_rightclick = function(pos, node, clicker)
@@ -181,11 +185,9 @@ minetest.register_node("scifi_nodes:pad", {
 		minetest.after(1, function()
 		local ppos = clicker:getpos()
 		if minetest.get_node({x=ppos.x, y=ppos.y, z=ppos.z}).name == "scifi_nodes:pad" then
-		clicker:setpos(position2)
-		else
-		--minetest.chat_send_all("Nothing to teleport!")
+			clicker:setpos(position2)
 		end
-		local objs = minetest.env:get_objects_inside_radius(pos, 3) 
+		local objs = minetest.env:get_objects_inside_radius(pos, 3)
                 for _, obj in pairs(objs) do
 				if obj:get_luaentity() and not obj:is_player() then
 				if obj:get_luaentity().name == "__builtin:item" then
@@ -217,11 +219,9 @@ minetest.register_node("scifi_nodes:pad", {
 		minetest.after(1, function()
 		local ppos = clicker:getpos()
 		if minetest.get_node({x=ppos.x, y=ppos.y, z=ppos.z}).name == "scifi_nodes:pad" then
-		clicker:setpos(position1)
-		else
-		--minetest.chat_send_all("No-one to teleport!")
+			clicker:setpos(position1)
 		end
-		local objs = minetest.env:get_objects_inside_radius(pos, 3) 
+		local objs = minetest.env:get_objects_inside_radius(pos, 3)
                 for _, obj in pairs(objs) do
 				if obj:get_luaentity() and not obj:is_player() then
 				if obj:get_luaentity().name == "__builtin:item" then
@@ -261,7 +261,8 @@ minetest.register_node("scifi_nodes:pad", {
 			{-0.8125, -0.5, -0.875, 0.75, -0.375, 0.875}, -- NodeBox2
 			{-0.875, -0.5, -0.8125, 0.8125, -0.375, 0.8125}, -- NodeBox3
 			{-0.8125, -0.5, -0.75, 0.75, -0.3125, 0.75}, -- NodeBox4
-		}
+		},
+	sounds = default.node_sound_wood_defaults()
 	}
 })
 
@@ -361,8 +362,6 @@ minetest.register_node("scifi_nodes:pot_lid", {
 	sounds = default.node_sound_glass_defaults()
 })
 
-
-
 minetest.register_node("scifi_nodes:pot", {
 	description = "metal plant pot (right click for lid, shift+rightclick to plant)",
 	tiles = {
@@ -387,12 +386,12 @@ minetest.register_node("scifi_nodes:pot", {
 		}
 	},
 	on_rightclick = function(pos, node, clicker, item, _)
-	local node = minetest.get_node({x=pos.x, y=pos.y+2, z=pos.z})
-	if node.name == "scifi_nodes:pot_lid" then
-		minetest.set_node({x=pos.x, y=pos.y+2, z=pos.z}, {name="air", param2=node.param2})
-	elseif node.name ~= "scifi_nodes:pot_lid" and node.name == "air" then
-		minetest.set_node({x=pos.x, y=pos.y+2, z=pos.z}, {name="scifi_nodes:pot_lid", param2=node.param2})
-	end
+		local lid_node = minetest.get_node({x=pos.x, y=pos.y+2, z=pos.z})
+		if lid_node.name == "scifi_nodes:pot_lid" then
+			minetest.set_node({x=pos.x, y=pos.y+2, z=pos.z}, {name="air", param2=lid_node.param2})
+		elseif lid_node.name ~= "scifi_nodes:pot_lid" and node.name == "air" then
+			minetest.set_node({x=pos.x, y=pos.y+2, z=pos.z}, {name="scifi_nodes:pot_lid", param2=lid_node.param2})
+		end
 	end,
 	on_destruct = function(pos, node, _)
 		minetest.remove_node({x=pos.x, y=pos.y+2, z=pos.z})
@@ -423,12 +422,12 @@ minetest.register_node("scifi_nodes:pot2", {
 		}
 	},
 	on_rightclick = function(pos, node, clicker, item, _)
-	local node = minetest.get_node({x=pos.x, y=pos.y+2, z=pos.z})
-	if node.name == "scifi_nodes:pot_lid" then
-		minetest.set_node({x=pos.x, y=pos.y+2, z=pos.z}, {name="air", param2=node.param2})
-	elseif node.name ~= "scifi_nodes:pot_lid" and node.name == "air" then
-		minetest.set_node({x=pos.x, y=pos.y+2, z=pos.z}, {name="scifi_nodes:pot_lid", param2=node.param2})
-	end
+		local lid_node = minetest.get_node({x=pos.x, y=pos.y+2, z=pos.z})
+		if lid_node.name == "scifi_nodes:pot_lid" then
+			minetest.set_node({x=pos.x, y=pos.y+2, z=pos.z}, {name="air", param2=lid_node.param2})
+		elseif lid_node.name ~= "scifi_nodes:pot_lid" and node.name == "air" then
+			minetest.set_node({x=pos.x, y=pos.y+2, z=pos.z}, {name="scifi_nodes:pot_lid", param2=lid_node.param2})
+		end
 	end,
 	on_destruct = function(pos, node, _)
 		minetest.remove_node({x=pos.x, y=pos.y+2, z=pos.z})
@@ -506,7 +505,8 @@ minetest.register_node("scifi_nodes:ladder", {
 			{0.3125, -0.5, 0.3125, 0.4375, -0.375, 0.4375}, -- NodeBox24
 			{0.3125, -0.5, 0.0625, 0.4375, -0.375, 0.1875}, -- NodeBox25
 			{0.3125, -0.5, -0.1875, 0.4375, -0.375, -0.0625}, -- NodeBox26
-		}
+		},
+	sounds = default.node_sound_metal_defaults()
 	},
 	paramtype2 = "wallmounted",
 	walkable = false,
@@ -605,9 +605,19 @@ minetest.register_node("scifi_nodes:powered_stand", {
 	},
 	groups = {cracky=1, oddly_breakable_by_hand=1},
 	on_rightclick = function(pos, node, clicker, item, _)
-		local wield_item = clicker:get_wielded_item():get_name()
-		item:take_item()
-		minetest.add_item({x=pos.x, y=pos.y+1, z=pos.z}, wield_item)
+		local wield_item_stack = clicker:get_wielded_item()
+		local wield_item = wield_item_stack:get_name()
+		local taken = item:take_item()
+		if taken and not taken:is_empty() then
+
+			if wield_item_stack:get_count() == 1 then
+				-- only 1 item in "hands" copy over entire stack with metadata
+				wield_item = wield_item_stack
+			end
+
+			minetest.add_item({x=pos.x, y=pos.y+1, z=pos.z}, wield_item)
+			return item
+		end
 	end,
 })
 
@@ -631,6 +641,7 @@ minetest.register_node("scifi_nodes:cover", {
 			{-0.3125, -0.375, -0.3125, 0.3125, -0.3125, 0.3125}, -- NodeBox6
 		}
 	},
+	sounds = default.node_sound_wood_defaults(),
 	groups = {cracky=1, oddly_breakable_by_hand=1}
 })
 
@@ -735,6 +746,7 @@ minetest.register_node("scifi_nodes:table", {
 			{-0.0625, 0.25, -0.125, 0.0625, 0.4375, -0.0625}, -- NodeBox7
 		}
 	},
+	sounds = default.node_sound_metal_defaults(),
 	groups = {cracky=1}
 })
 
@@ -1067,8 +1079,11 @@ minetest.register_node("scifi_nodes:itemholder", {
 		if name == meta:get_string("owner") or
 				minetest.check_player_privs(name, "protection_bypass") then
 			local wield_item = clicker:get_wielded_item():get_name()
-			item:take_item()
-			minetest.add_item(pos, wield_item)
+			local taken = item:take_item()
+			if taken and not taken:is_empty() then
+				minetest.add_item(pos, wield_item)
+				return item
+			end
 		end
 	end,
 	can_dig = function(pos,player)
@@ -1080,9 +1095,8 @@ minetest.register_node("scifi_nodes:itemholder", {
 	end,
 	on_destruct = function(pos)
 		local meta = minetest.get_meta(pos)
-		local node = minetest.get_node(pos)
 		if meta:get_string("item") ~= "" then
-			drop_item(pos, node)
+			minetest.add_item(pos, meta:get_string("item"))
 		end
 	end,
 })
@@ -1134,12 +1148,12 @@ minetest.register_node("scifi_nodes:widescreen", {
 		type = "fixed",
 		fixed = {
 			{-0.375, -0.3125, 0.4375, 0.375, 0.3125, 0.5}, -- NodeBox1
-			{-0.5, -0.375, 0.375, -0.375, 0.375, 0.5}, -- NodeBox2
-			{0.375, -0.375, 0.375, 0.5, 0.375, 0.5}, -- NodeBox3
-			{-0.3125, 0.25, 0.375, 0.3125, 0.375, 0.5}, -- NodeBox4
-			{-0.3125, -0.375, 0.375, 0.25, -0.25, 0.5}, -- NodeBox5
-			{-0.5, -0.3125, 0.375, 0.5, -0.25, 0.5}, -- NodeBox6
-			{-0.5, 0.25, 0.375, 0.5, 0.3125, 0.5}, -- NodeBox7
+			{-0.5, -0.375, 0.375, -0.375, 0.375, 0.5},     -- NodeBox2
+			{0.375, -0.375, 0.375, 0.5, 0.375, 0.5},       -- NodeBox3
+			{-0.3125, 0.25, 0.375, 0.3125, 0.375, 0.5},    -- NodeBox4
+			{-0.3125, -0.375, 0.375, 0.25, -0.25, 0.5},    -- NodeBox5
+			{-0.5, -0.3125, 0.375, 0.5, -0.25, 0.5},       -- NodeBox6
+			{-0.5, 0.25, 0.375, 0.5, 0.3125, 0.5},         -- NodeBox7
 		}
 	},
 	groups = {cracky=1, oddly_breakable_by_hand=1}
@@ -1196,113 +1210,3 @@ minetest.register_node("scifi_nodes:windowpanel", {
     on_place = minetest.rotate_node,
     sounds = default.node_sound_glass_defaults(),
 })
-
-if  (mesecon ~= nil) and
-    (mesecon.receptor_on ~= nil) and
-    (mesecon.receptor_off ~= nil)           then
-   minetest.register_node("scifi_nodes:switch_off", {
-        description = "Wall switch",
-        tiles = {
-            "scifi_nodes_switch_off.png",
-        },
-        inventory_image = "scifi_nodes_switch_on.png",
-        wield_image = "scifi_nodes_switch_on.png",
-        drawtype = "signlike",
-        sunlight_propagates = true,
-        selection_box = {
-            type = "wallmounted",
-            fixed = {-0.5, -0.3, -0.3, -0.45, 0.3, 0.3}
-        },
-        paramtype = "light",
-        paramtype2 = "wallmounted",
-        groups = {cracky=1, oddly_breakable_by_hand=1, mesecon_needs_receiver = 1},
-        on_rightclick = function(pos, node, clicker, item, _)
-                minetest.set_node(pos, {name="scifi_nodes:switch_on", param2=node.param2})
-                mesecon.receptor_on(pos)
-        end,
-        sounds = default.node_sound_glass_defaults(),
-        mesecons = {receptor = { state = mesecon.state.off }}
-    })
-
-    minetest.register_node("scifi_nodes:switch_on", {
-        description = "Wall switch",
-        sunlight_propagates = true,
-        tiles = {
-            "scifi_nodes_switch_on.png",
-        },
-        inventory_image = "scifi_nodes_switch_on.png",
-        wield_image = "scifi_nodes_switch_on.png",
-        drawtype = "signlike",
-        selection_box = {
-            type = "wallmounted",
-            fixed = {-0.5, -0.3, -0.3, -0.45, 0.3, 0.3}
-        },
-        paramtype = "light",
-        paramtype2 = "wallmounted",
-        light_source = 5,
-        groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1, mesecon_needs_receiver = 1},
-        on_rightclick = function(pos, node, clicker, item, _)
-                minetest.set_node(pos, {name="scifi_nodes:switch_off", param2=node.param2})
-                mesecon.receptor_off(pos)
-        end,
-        sounds = default.node_sound_glass_defaults(),
-        mesecons = {receptor = { state = mesecon.state.on }}
-    })
-
-    minetest.register_craft({
-        output = "scifi_nodes:switch_off 2",
-        recipe = {
-            {"mesecons_button:button_off", "scifi_nodes:grey", ""}
-        }
-    })
-    
-else
-    --wall switch, currently does not do anything
-    minetest.register_node("scifi_nodes:switch_off", {
-        description = "Wall switch",
-        tiles = {
-            "scifi_nodes_switch_off.png",
-        },
-        inventory_image = "scifi_nodes_switch_on.png",
-        wield_image = "scifi_nodes_switch_on.png",
-        drawtype = "signlike",
-        sunlight_propagates = true,
-        selection_box = {
-            type = "wallmounted",
-            fixed = {-0.5, -0.3, -0.3, -0.45, 0.3, 0.3}
-        },
-        paramtype = "light",
-        paramtype2 = "wallmounted",
-        groups = {cracky=1, oddly_breakable_by_hand=1},
-        on_rightclick = function(pos, node, clicker, item, _)
-                minetest.set_node(pos, {name="scifi_nodes:switch_on", param2=node.param2})
-        end,
-        sounds = default.node_sound_glass_defaults()
-    })
-
-    minetest.register_node("scifi_nodes:switch_on", {
-        description = "Wall switch",
-        sunlight_propagates = true,
-        tiles = {
-            "scifi_nodes_switch_on.png",
-        },
-        inventory_image = "scifi_nodes_switch_on.png",
-        wield_image = "scifi_nodes_switch_on.png",
-        drawtype = "signlike",
-        selection_box = {
-            type = "wallmounted",
-            fixed = {-0.5, -0.3, -0.3, -0.45, 0.3, 0.3}
-        },
-        paramtype = "light",
-        paramtype2 = "wallmounted",
-        light_source = 5,
-        groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
-        on_rightclick = function(pos, node, clicker, item, _)
-                minetest.set_node(pos, {name="scifi_nodes:switch_off", param2=node.param2})
-        end,
-        sounds = default.node_sound_glass_defaults()
-    })
-    
-    --end of wall switch
-    
-end -- if(mesecon.receptor ~= on
