@@ -1,6 +1,7 @@
 -- CRAFTING RECIPES FOR SCIFI NODES
 
 -- 6 basic plastic from 9 homedecor plastic sheet
+--[[
 minetest.register_craft({
 	output = "scifi_nodes:white2 6",
 	recipe = {
@@ -9,7 +10,7 @@ minetest.register_craft({
 		{"homedecor:plastic_sheeting", "homedecor:plastic_sheeting", "homedecor:plastic_sheeting"}
 	}
 })
-
+]]--
 minetest.register_craft({
 	output = "scifi_nodes:super_white",
 	recipe = {
@@ -619,7 +620,6 @@ minetest.register_craft({
 	}
     }
 })
-
 -- 4 Doom light from 4 red dye and 4 black
 minetest.register_craft({
     output = "scifi_nodes:doomlight 4",
@@ -1680,7 +1680,7 @@ minetest.register_craft({
 minetest.register_craft({
     output = 'scifi_nodes:stripes2top 3',
     recipe = {
-        {"scifi_nodes:black","scifi_noedes:black","scifi_nodes:black"},
+        {"scifi_nodes:black","scifi_nodes:black","scifi_nodes:black"},
         {"default:silver_sand","default:silver_sand","default:silver_sand"}
     }
 })
